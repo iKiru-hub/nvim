@@ -74,20 +74,15 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  gruvbox = {
+  ["dracula.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox",
-    url = "https://github.com/gruvbox-community/gruvbox"
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  ["vim-emoji"] = {
-    loaded = true,
-    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-emoji",
-    url = "https://github.com/junegunn/vim-emoji"
   }
 }
 

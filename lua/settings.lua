@@ -4,7 +4,7 @@ local o = vim.o
 -- cmd('syntax on')
 -- vim.api.nvim_command('filetype plugin indent on')
 
-o.termguicolors = true
+-- o.termguicolors = true
 -- o.background = 'dark'
 
 -- Do not save when switching buffers
@@ -28,8 +28,8 @@ o.cursorline = true
 o.expandtab = true
 -- o.smarttab = true
 o.cindent = true
--- o.autoindent = true
-o.wrap = true
+o.autoindent = true
+-- o.wrap = true
 o.textwidth = 300
 o.tabstop = 4
 o.shiftwidth = 0

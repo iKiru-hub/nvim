@@ -12,6 +12,7 @@ return require('packer').startup(
 	    -- Colorscheme setup --
         -----------------------
 
-	    use 'gruvbox-community/gruvbox'
-        use 'junegunn/vim-emoji'
+	    -- use 'gruvbox-community/gruvbox'
+        --use 'junegunn/vim-emoji'
+        use 'Mofiqul/dracula.nvim'
 end)
