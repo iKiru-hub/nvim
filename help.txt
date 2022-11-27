@@ -1,2 +1,14 @@
 
 -- transparency : directly in plugin.dracula.lua 
+
+-- NERDTree --
+: if need help, type ':NERDTree' and then '?'
+: to move between tabs 'gt' 'gT'
+: to move between splits 'ctrl' + 'W'
+
+-- SimpylFold -- 
+: it is 'Simpyl' not 'Symply', beware
+: 'zo' to open a toggled part
+: 'zc' to close a toggled part
+
+
