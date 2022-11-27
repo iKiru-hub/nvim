@@ -1,0 +1,2 @@
+
+-- transparency : directly in plugin.dracula.lua 
