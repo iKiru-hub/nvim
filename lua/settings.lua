@@ -76,3 +76,7 @@ o.jumpoptions = 'view'
 -- Map <leader> to space
 g.mapleader = ' '
 g.maplocalleader = ' '
+
+-- copypaste to clipboard instead of the nvim buffer 
+vim.cmd("set clipboard=unnamed")
+
