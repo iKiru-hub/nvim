@@ -1,4 +1,3 @@
-
 return require('packer').startup(
     function()
 	
@@ -14,8 +13,15 @@ return require('packer').startup(
 
 	    -- use 'gruvbox-community/gruvbox'
         --use 'junegunn/vim-emoji'
-        use 'Mofiqul/dracula.nvim'
-
+        -- use 'Mofiqul/dracula.nvim'
+        -- use 'gosukiwi/vim-atom-dark'
+        use 'sainnhe/sonokai'
+        
+        ------------------
+        -- Transparency --
+        ------------------
+        use 'tribela/vim-transparent'
+        
         -------------------------
         -- Progamming workflow --
         -------------------------
