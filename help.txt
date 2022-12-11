@@ -8,6 +8,7 @@
 
 -- SimpylFold -- 
 : it is 'Simpyl' not 'Symply', beware
+: often [or always?] it works only for python
 : 'zo' to open a toggled part
 : 'zc' to close a toggled part
 

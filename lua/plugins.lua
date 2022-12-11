@@ -49,4 +49,6 @@ return require('packer').startup(
               end
               }
         
+        -- github copilot --
+        use {"github/copilot.vim"}
 end)

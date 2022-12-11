@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/daniekru/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/daniekru/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/daniekru/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/daniekru/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/daniekru/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "C:\\Users\\io\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?.lua;C:\\Users\\io\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\io\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\io\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
+local install_cpath_pattern = "C:\\Users\\io\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\lua\\5.1\\?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,49 +76,54 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   SimpylFold = {
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/SimpylFold",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\SimpylFold",
     url = "https://github.com/tmhedberg/SimpylFold"
   },
   ["coc.nvim"] = {
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
+  },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
+    url = "https://github.com/github/copilot.vim"
   },
   ["dracula.nvim"] = {
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
   ["hop.nvim"] = {
     config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   neomake = {
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/neomake",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neomake",
     url = "https://github.com/neomake/neomake"
   },
   nerdtree = {
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/nerdtree",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nerdtree",
     url = "https://github.com/preservim/nerdtree"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "C:\\Users\\io\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   }
 }
