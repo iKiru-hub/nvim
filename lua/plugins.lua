@@ -13,8 +13,11 @@ return require('packer').startup(
         -----------------------
 
 	    -- use 'gruvbox-community/gruvbox'
-        --use 'junegunn/vim-emoji'
-        use 'Mofiqul/dracula.nvim'
+        -- use 'junegunn/vim-emoji'
+        -- use 'Mofiqul/dracula.nvim'
+        -- use 'folke/tokyonight.nvim'
+        -- use "EdenEast/nightfox.nvim"
+        use 'catppuccin/nvim'
 
         -------------------------
         -- Progamming workflow --
