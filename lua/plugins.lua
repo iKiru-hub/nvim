@@ -1,4 +1,3 @@
-
 return require('packer').startup(
     function()
 	
@@ -17,7 +16,16 @@ return require('packer').startup(
         -- use 'Mofiqul/dracula.nvim'
         -- use 'folke/tokyonight.nvim'
         -- use "EdenEast/nightfox.nvim"
-        use 'catppuccin/nvim'
+        -- use 'catppuccin/nvim'
+        -- use 'junegunn/vim-emoji'
+        -- use 'Mofiqul/dracula.nvim'
+        -- use 'gosukiwi/vim-atom-dark'
+        use 'sainnhe/sonokai'
+        
+        ------------------
+        -- Transparency --
+        ------------------
+        use 'tribela/vim-transparent'
 
         -------------------------
         -- Progamming workflow --
@@ -38,7 +46,7 @@ return require('packer').startup(
         -- autocompletion --
         use {"neomake/neomake"}
         use {"neoclide/coc.nvim", branch='release'}
-        
+
         -- indentation lines --
         use "lukas-reineke/indent-blankline.nvim"
 
@@ -52,4 +60,6 @@ return require('packer').startup(
               end
               }
         
+        -- github copilot --
+        -- use {"github/copilot.vim"}
 end)
