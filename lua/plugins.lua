@@ -20,11 +20,12 @@ return require('packer').startup(
         -- use 'junegunn/vim-emoji'
         -- use 'Mofiqul/dracula.nvim'
         -- use 'gosukiwi/vim-atom-dark'
-        use 'sainnhe/sonokai'
+        -- use 'sainnhe/sonokai'
         -- use 'navarasu/onedark.nvim'
+        use 'NLKNguyen/papercolor-theme'
 
         -- vim.o.termguicolors = true
-        vim.cmd [[colorscheme sonokai]]
+        vim.cmd [[colorscheme PaperColor]]
 
         ------------------
         -- Transparency --

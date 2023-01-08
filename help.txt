@@ -12,7 +12,11 @@
 > 'zo' to open a toggled part
 > 'zc' to close a toggled part
 
--- Transparent ..
+-- Transparent --
 > :TransparentEnable
 > :TransparentDisable
 > :TransparentToggle
+
+-- colorscheme PaperColor --
+> :set background=dark 
+> :set background=light
