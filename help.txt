@@ -1,4 +1,7 @@
 
+-- General --
+> :history -- command history
+
 -- transparency : directly in plugin.dracula.lua 
 
 -- NERDTree --
@@ -20,3 +23,27 @@
 -- colorscheme PaperColor --
 > :set background=dark 
 > :set background=light
+
+-- Telescope --
+> :Telescope -- available commands
+> :Telescope find_files -- fuzzy search files in the current (+sub)directory 
+        + <CR> to open file
+        + <ctrl-v> to open file in vertical split
+        + <ctrl-x> to open file in horizontal split
+        + <Ctrl-t> to open file in new tab
+> :Telescope live_grep -- search with RegEx in file 
+> :Telescope file_browser -- create files and folders
+        + <ctrl-i> to create a file
+> :Telescope treesitter -- search str in the current file 
+> :Telescope buffers -- show opne buffers
+> :Telescope search_history 
+> :Telescope vim_options -- edit vim options
+> :Telescope colorscheme 
+> :Telescope git_commits -- see commit history
+        + <ctrl-r-h> -- reset to that commit 
+> :Telescope git_branches  
+        + <C-R> -- checkout branch 
+> :Telescope git_status
+        + <tab> stage or unstage file
+> :Telescope git_stash 
+        + <C-R> apply file 

@@ -80,3 +80,7 @@ g.maplocalleader = ' '
 -- copypaste to clipboard instead of the nvim buffer 
 vim.cmd("set clipboard=unnamed")
 
+-- set the colorscheme
+vim.o.termguicolors = true
+vim.cmd [[colorscheme sonokai]]
+

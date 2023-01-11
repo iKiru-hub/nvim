@@ -11,21 +11,16 @@ return require('packer').startup(
 	    -- Colorscheme setup --
         -----------------------
 
-	    -- use 'gruvbox-community/gruvbox'
-        -- use 'junegunn/vim-emoji'
-        -- use 'Mofiqul/dracula.nvim'
-        -- use 'folke/tokyonight.nvim'
-        -- use "EdenEast/nightfox.nvim"
-        -- use 'catppuccin/nvim'
-        -- use 'junegunn/vim-emoji'
-        -- use 'Mofiqul/dracula.nvim'
-        -- use 'gosukiwi/vim-atom-dark'
-        -- use 'sainnhe/sonokai'
-        -- use 'navarasu/onedark.nvim'
+	    use 'gruvbox-community/gruvbox'
+        use 'Mofiqul/dracula.nvim'
+        use 'folke/tokyonight.nvim'
+        use "EdenEast/nightfox.nvim"
+        use 'catppuccin/nvim'
+        use 'junegunn/vim-emoji'
+        use 'gosukiwi/vim-atom-dark'
+        use 'sainnhe/sonokai'
+        use 'navarasu/onedark.nvim'
         use 'NLKNguyen/papercolor-theme'
-
-        -- vim.o.termguicolors = true
-        vim.cmd [[colorscheme PaperColor]]
 
         ------------------
         -- Transparency --
@@ -62,6 +57,12 @@ return require('packer').startup(
         -- file explorer --
         use {"preservim/nerdtree"}
 
+        -- fuzzy finder --
+        use {
+            'nvim-telescope/telescope.nvim',
+            requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} }
+        }
+
         -- fold sub-routines --
         use {"tmhedberg/SimpylFold"}
         
@@ -83,8 +84,8 @@ return require('packer').startup(
               }
         
         -- github copilot --
-        -- use {"github/copilot.vim"
-        --
+        use {"github/copilot.vim"}
+        
         -- [[ Configure Treesitter ]]
         -- See `:help nvim-treesitter`
          require('nvim-treesitter.configs').setup {

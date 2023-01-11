@@ -5,4 +5,7 @@ require('plugins')
 require('settings')
 require('keybindings')
 
-
+-- plugin configs 
+require('configs.treesetter')
+require('configs.telescope')
+require('configs.coc')
