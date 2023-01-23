@@ -1,6 +1,12 @@
 
 -- General --
 > :history -- command history
+> :%s/original/replaced/g -- Will substitute across the entire file (%) original by replaced. 
+  And will replace multiple occurrences on the same line g.
+  flag "c" will ask for confirmation before each replacement.
+
+-- CUSTOM ---
+> <ctrl> + <r> -- save and run python file
 
 -- transparency : directly in plugin.dracula.lua 
 
