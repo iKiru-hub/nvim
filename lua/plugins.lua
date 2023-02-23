@@ -48,6 +48,9 @@ return require('packer').startup(
         -- Progamming workflow --
         -------------------------
         
+        -- cpp compiler --
+        use {"cdelledonne/vim-cmake"}
+        
         -- auto-pair --
         use {
 	        "windwp/nvim-autopairs",

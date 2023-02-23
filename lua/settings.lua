@@ -25,7 +25,7 @@ o.signcolumn = 'yes:2'
 o.cursorline = true
 
 -- Better editing experience
-o.expandtab = true
+ o.expandtab = true
 -- o.smarttab = true
 o.cindent = true
 o.autoindent = true

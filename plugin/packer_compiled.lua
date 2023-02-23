@@ -193,6 +193,11 @@ _G.packer_plugins = {
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-atom-dark",
     url = "https://github.com/gosukiwi/vim-atom-dark"
   },
+  ["vim-cmake"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-cmake",
+    url = "https://github.com/cdelledonne/vim-cmake"
+  },
   ["vim-emoji"] = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-emoji",
