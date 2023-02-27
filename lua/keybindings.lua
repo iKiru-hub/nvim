@@ -1,3 +1,4 @@
+
 -- a function to map a key (k) to an action (v)
 -- in a defined mode (m)
 local function map(m, k, v)

@@ -39,10 +39,10 @@ return require('packer').startup(
          }
 
          
-        use { -- Additional text objects via treesitter
-            'nvim-treesitter/nvim-treesitter-textobjects',
-            after = 'nvim-treesitter',
-        }
+        --use { -- Additional text objects via treesitter
+        --    'nvim-treesitter/nvim-treesitter-textobjects',
+        --    after = 'nvim-treesitter',
+        --}
 
         -------------------------
         -- Progamming workflow --
@@ -77,14 +77,14 @@ return require('packer').startup(
         use "lukas-reineke/indent-blankline.nvim"
 
         -- hop around fast --
-        use {
-            'phaazon/hop.nvim',
-             branch = 'v2', -- optional but strongly recommended
-             config = function()
+        --use {
+        --    'phaazon/hop.nvim',
+        --     branch = 'v2', -- optional but strongly recommended
+        --     config = function()
                 -- you can configure Hop the way you like here; see :h hop-config
-             require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-              end
-              }
+        --      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        --      end
+        --      }
         
         -- github copilot --
         use {"github/copilot.vim"}
@@ -93,7 +93,7 @@ return require('packer').startup(
         -- See `:help nvim-treesitter`
          require('nvim-treesitter.configs').setup {
          --  Add languages to be installed here that you want installed for treesitter
-           ensure_installed = { 'c', 'cpp', 'lua', 'python', 'bash', 'help' },
+           ensure_installed = { 'c', 'cpp', 'lua', 'python', 'rust', 'bash', 'help' },
 
            highlight = { enable = true },
            indent = { enable = true },
