@@ -87,6 +87,7 @@ vim.cmd [[colorscheme sonokai]]
 -- set the background to transparent
 vim.api.nvim_set_hl(0, "Normal", { bg="none"})
 vim.api.nvim_set_hl(0, "NormalFloat", { bg="none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg="none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { bg="none" })
 vim.api.nvim_set_hl(0, "Folded", { bg="none" })
 vim.api.nvim_set_hl(0, "FoldColumn", { bg="none" })
@@ -99,20 +100,5 @@ vim.api.nvim_set_hl(0, "Search", { bg="none" })
 vim.api.nvim_set_hl(0, "HorizontalSplit", { bg="none" })
 vim.api.nvim_set_hl(0, "search", { bg="none" })
 
--- set background of telescope to transparent
-vim.api.nvim_set_hl(0, "TelescopeBorder", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopeNormal", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopeSelection", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopeMatching", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopeMultiSelection", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopePreviewCaret", { bg="none" })
-vim.api.nvim_set_hl(0, "TelescopePreviewSelection", { bg="none" })
 
 
