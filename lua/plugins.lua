@@ -1,6 +1,6 @@
 return require('packer').startup(
     function()
-	
+
         --------------------
         -- Packer Manager --
         --------------------
@@ -38,6 +38,23 @@ return require('packer').startup(
           end,
          }
 
+        -- See `:help nvim-treesitter`
+         require('nvim-treesitter.configs').setup {
+         --  Add languages to be installed here that you want installed for treesitter
+           ensure_installed = { 'c', 'cpp', 'lua', 'python', 'rust', 'bash', 'help' },
+
+           highlight = { enable = true },
+           indent = { enable = true },
+           incremental_selection = {
+             enable = false,
+             keymaps = {
+               init_selection = '<c-space>',
+               node_incremental = '<c-space>',
+               scope_incremental = '<c-s>',
+               node_decremental = '<c-backspace>',
+             },
+           },
+         }
          
         --use { -- Additional text objects via treesitter
         --    'nvim-treesitter/nvim-treesitter-textobjects',
@@ -49,7 +66,7 @@ return require('packer').startup(
         -------------------------
         
         -- cpp compiler --
-        use {"cdelledonne/vim-cmake"}
+        -- use {"cdelledonne/vim-cmake"}
         
         -- auto-pair --
         use {
@@ -74,7 +91,7 @@ return require('packer').startup(
         use {"neoclide/coc.nvim", branch='release'}
 
         -- indentation lines --
-        use "lukas-reineke/indent-blankline.nvim"
+        -- use "lukas-reineke/indent-blankline.nvim"
 
         -- hop around fast --
         --use {
@@ -85,26 +102,21 @@ return require('packer').startup(
         --      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         --      end
         --      }
+        --
+        -- LSP configuratios & plugins 
+        use {
+            'neovim/nvim-lspconfig',
+            requires = {
+                -- Automatically isntall LSPs to stdpath for neovim
+                'williamboman/mason.nvim',
+                'williamboman/mason-lspconfig.nvim',
+
+                -- Useful status updates for LSP
+                'j-hui/fidget.nvim',
+            }
+        }
         
         -- github copilot --
         use {"github/copilot.vim"}
         
-        -- [[ Configure Treesitter ]]
-        -- See `:help nvim-treesitter`
-         require('nvim-treesitter.configs').setup {
-         --  Add languages to be installed here that you want installed for treesitter
-           ensure_installed = { 'c', 'cpp', 'lua', 'python', 'rust', 'bash', 'help' },
-
-           highlight = { enable = true },
-           indent = { enable = true },
-           incremental_selection = {
-             enable = false,
-             keymaps = {
-               init_selection = '<c-space>',
-               node_incremental = '<c-space>',
-               scope_incremental = '<c-s>',
-               node_decremental = '<c-backspace>',
-             },
-           },
-         }
 end)

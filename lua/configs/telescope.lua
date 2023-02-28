@@ -2,8 +2,8 @@ local builtin = require('telescope.builtin')
 
 -- note: I cleaned this file to start all over again
 
--- telescope keymaps (from ThePrimeagen)
-vim.keymap.set('n', '<leader>h', function()
+-- open fuzzy finder
+vim.keymap.set('n', '<leader>f', function()
   builtin.find_files()
 end)
 
@@ -13,3 +13,4 @@ vim.keymap.set('n', '<leader>g', function()
     search = vim.fn.input('Grep > ')
   })
 end)
+

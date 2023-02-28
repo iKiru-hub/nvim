@@ -94,15 +94,25 @@ _G.packer_plugins = {
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
-  ["indent-blankline.nvim"] = {
+  ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   neomake = {
     loaded = true,
@@ -129,6 +139,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -179,11 +194,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-atom-dark",
     url = "https://github.com/gosukiwi/vim-atom-dark"
-  },
-  ["vim-cmake"] = {
-    loaded = true,
-    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-cmake",
-    url = "https://github.com/cdelledonne/vim-cmake"
   },
   ["vim-emoji"] = {
     loaded = true,
