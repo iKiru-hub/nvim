@@ -3,7 +3,7 @@ local builtin = require('telescope.builtin')
 -- note: I cleaned this file to start all over again
 
 -- open fuzzy finder
-vim.keymap.set('n', '<leader>f', function()
+vim.keymap.set('n', '<leader>h', function()
   builtin.find_files()
 end)
 

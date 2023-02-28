@@ -1,4 +1,6 @@
 
+vim.g.mapleader = ' '
+
 -- a function to map a key (k) to an action (v)
 -- in a defined mode (m)
 local function map(m, k, v)
@@ -11,4 +13,4 @@ map('i', '<C-E>', '<ESC>A')
 map('i', '<C-A>', '<ESC>I')
 
 -- save file + compile python file with <control + r>
-map('n', '<C-S>', ':w<CS>:!python %<CS>')
+map('n', '<leader>r', ':w<CR>:!python %<CR>')

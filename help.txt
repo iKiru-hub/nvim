@@ -6,7 +6,7 @@
   flag "c" will ask for confirmation before each replacement.
 
 -- CUSTOM ---
-> <ctrl> + <r> -- save and run python file
+> <leader>r -- save and run python file
 
 -- transparency : directly in plugin.dracula.lua 
 
