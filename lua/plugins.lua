@@ -7,6 +7,26 @@ return require('packer').startup(
 
 	    use 'wbthomason/packer.nvim'
 
+        -------------------
+        -- Neovim Welcom --
+        -------------------
+        
+        use {
+            'goolord/alpha-nvim',
+            requires = { 'nvim-tree/nvim-web-devicons' },
+            config = function ()
+                require'alpha'.setup(require'alpha.themes.startify'.config)
+                vim.api.nvim_set_keymap('n', '<leader>a', ':Alpha<CR>', {noremap = true, silent = true})
+            end
+        }
+
+        --use {
+        --    'goolord/alpha-nvim',
+        --    config = function ()
+        --        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        --    end
+        --}
+
         -----------------------
 	    -- Colorscheme setup --
         -----------------------
@@ -38,35 +58,9 @@ return require('packer').startup(
           end,
          }
 
-        -- See `:help nvim-treesitter`
-         require('nvim-treesitter.configs').setup {
-         --  Add languages to be installed here that you want installed for treesitter
-           ensure_installed = { 'c', 'cpp', 'lua', 'python', 'rust', 'bash', 'help' },
-
-           highlight = { enable = true },
-           indent = { enable = true },
-           incremental_selection = {
-             enable = false,
-             keymaps = {
-               init_selection = '<c-space>',
-               node_incremental = '<c-space>',
-               scope_incremental = '<c-s>',
-               node_decremental = '<c-backspace>',
-             },
-           },
-         }
-         
-        --use { -- Additional text objects via treesitter
-        --    'nvim-treesitter/nvim-treesitter-textobjects',
-        --    after = 'nvim-treesitter',
-        --}
-
         -------------------------
         -- Progamming workflow --
         -------------------------
-        
-        -- cpp compiler --
-        -- use {"cdelledonne/vim-cmake"}
         
         -- auto-pair --
         use {
@@ -82,41 +76,47 @@ return require('packer').startup(
             'nvim-telescope/telescope.nvim',
             requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} }
         }
-
-        -- fold sub-routines --
-        use {"tmhedberg/SimpylFold"}
         
         -- autocompletion --
         use {"neomake/neomake"}
         use {"neoclide/coc.nvim", branch='release'}
 
-        -- indentation lines --
-        -- use "lukas-reineke/indent-blankline.nvim"
-
-        -- hop around fast --
-        --use {
-        --    'phaazon/hop.nvim',
-        --     branch = 'v2', -- optional but strongly recommended
-        --     config = function()
-                -- you can configure Hop the way you like here; see :h hop-config
-        --      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-        --      end
-        --      }
-        --
-        -- LSP configuratios & plugins 
+        -- LSP configuratios & plugins --
         use {
-            'neovim/nvim-lspconfig',
-            requires = {
-                -- Automatically isntall LSPs to stdpath for neovim
-                'williamboman/mason.nvim',
-                'williamboman/mason-lspconfig.nvim',
-
-                -- Useful status updates for LSP
-                'j-hui/fidget.nvim',
-            }
+            "williamboman/nvim-lsp-installer",
+            "neovim/nvim-lspconfig",
         }
         
         -- github copilot --
         use {"github/copilot.vim"}
         
 end)
+
+
+
+--------------------------------
+-- old plugins no longer used --
+--------------------------------
+
+        
+-- cpp compiler --
+-- use {"cdelledonne/vim-cmake"}
+
+
+-- fold sub-routines -- now using treesitter
+--use {"tmhedberg/SimpylFold"}
+
+
+-- indentation lines --
+-- use "lukas-reineke/indent-blankline.nvim"
+
+-- hop around fast --
+-- use {
+--    'phaazon/hop.nvim',
+--     branch = 'v2', -- optional but strongly recommended
+--     config = function()
+        -- you can configure Hop the way you like here; see :h hop-config
+--      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+--      end
+--      }
+--

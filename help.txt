@@ -1,25 +1,22 @@
 
+-------------
 -- General --
+-------------
+
 > :history -- command history
 > :%s/original/replaced/g -- Will substitute across the entire file (%) original by replaced. 
   And will replace multiple occurrences on the same line g.
   flag "c" will ask for confirmation before each replacement.
+> :split -- split window horizontally
+> :vsplit || :vsp -- split window vertically
 
--- CUSTOM ---
+------------
+-- CUSTOM --
+------------
+
 > <leader>r -- save and run python file
 
 -- transparency : directly in plugin.dracula.lua 
-
--- NERDTree --
-> if need help, type ':NERDTree' and then '?'
-> to move between tabs 'gt' 'gT'
-> to move between splits 'ctrl' + 'W'
-
--- SimpylFold -- 
-> it is 'Simpyl' not 'Symply', beware
-> often [or always?] it works only for python
-> 'zo' to open a toggled part
-> 'zc' to close a toggled part
 
 -- Transparent --
 > :TransparentEnable
@@ -30,14 +27,16 @@
 > :set background=dark 
 > :set background=light
 
+---------------
 -- Telescope --
+---------------
 > :Telescope -- available commands
-> :Telescope find_files -- fuzzy search files in the current (+sub)directory 
+> <leader>h || :Telescope find_files -- fuzzy search files in the current (+sub)directory 
         + <CR> to open file
         + <ctrl-v> to open file in vertical split
         + <ctrl-x> to open file in horizontal split
         + <Ctrl-t> to open file in new tab
-> :Telescope live_grep -- search with RegEx in file 
+> <leader>g || :Telescope live_grep -- search with RegEx in file 
 > :Telescope file_browser -- create files and folders
         + <ctrl-i> to create a file
 > :Telescope treesitter -- search str in the current file 
@@ -53,3 +52,27 @@
         + <tab> stage or unstage file
 > :Telescope git_stash 
         + <C-R> apply file 
+
+----------------
+-- Alpha-nvim --
+----------------
+> <leader>a || :Alpha -- open Alpha window
+
+----------------------------------------------------
+----------- Not really used anymore ----------------
+
+--------------
+-- NERDTree --
+--------------
+> if need help, type ':NERDTree' and then '?'
+> to move between tabs 'gt' 'gT'
+> to move between splits 'ctrl' + 'W'
+
+----------------
+-- SimpylFold --
+----------------
+> it is 'Simpyl' not 'Symply', beware
+> often [or always?] it works only for python
+> 'zo' to open a toggled part
+> 'zc' to close a toggled part
+

@@ -1,5 +1,6 @@
 local g = vim.g
-local o = vim.o
+local o = vim.o  -- global options
+local b = vim.bo -- buffer options
 
 -- cmd('syntax on')
 -- vim.api.nvim_command('filetype plugin indent on')
@@ -25,7 +26,11 @@ o.signcolumn = 'yes:2'
 o.cursorline = true
 
 -- Better editing experience
- o.expandtab = true
+o.expandtab = true
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+
 -- o.smarttab = true
 o.cindent = true
 o.autoindent = true
@@ -35,7 +40,6 @@ o.tabstop = 4
 o.shiftwidth = 0
 o.softtabstop = -1 -- If negative, shiftwidth value is used
 o.list = true
-
 
 -- Makes neovim and host OS clipboard play nicely with each other
 o.clipboard = 'unnamedplus'
