@@ -14,3 +14,10 @@ map('i', '<C-A>', '<ESC>I')
 
 -- save file + compile python file with <control + r>
 map('n', '<leader>r', ':w<CR>:!python %<CR>')
+
+-- enable transparency 
+map('n', '<leader>t', ':set winblend=10<CR>')
+map('n', '<leader>T', ':set winblend=0<CR>')
+
+-- exit terminal model with esc
+map('t', '<Esc>', '<C-\\><C-n>')

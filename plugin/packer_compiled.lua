@@ -75,7 +75,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["alpha-nvim"] = {
-    config = { "\27LJ\2\n√\1\0\0\6\0\f\0\0186\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\0016\0\5\0009\0\6\0009\0\a\0'\2\b\0'\3\t\0'\4\n\0005\5\v\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\15:Alpha<CR>\14<leader>a\6n\20nvim_set_keymap\bapi\bvim\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0" },
+    config = { "\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23configs.alpha-dash\frequire\0" },
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
@@ -136,6 +136,11 @@ _G.packer_plugins = {
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -144,7 +149,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["onedark.nvim"] = {
     loaded = true,
@@ -176,6 +181,11 @@ _G.packer_plugins = {
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
   },
+  tagbar = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/majutsushi/tagbar"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -186,10 +196,20 @@ _G.packer_plugins = {
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
   ["vim-atom-dark"] = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-atom-dark",
     url = "https://github.com/gosukiwi/vim-atom-dark"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-emoji"] = {
     loaded = true,
@@ -210,7 +230,7 @@ try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B
 time([[Config for nvim-autopairs]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n√\1\0\0\6\0\f\0\0186\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\0016\0\5\0009\0\6\0009\0\a\0'\2\b\0'\3\t\0'\4\n\0005\5\v\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\15:Alpha<CR>\14<leader>a\6n\20nvim_set_keymap\bapi\bvim\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
+try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23configs.alpha-dash\frequire\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
 
 _G._packer.inside_compile = false

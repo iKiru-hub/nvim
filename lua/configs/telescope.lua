@@ -14,3 +14,7 @@ vim.keymap.set('n', '<leader>g', function()
   })
 end)
 
+-- colorscheme
+vim.keymap.set('n', '<leader>c', function()
+  builtin.colorscheme()
+end)

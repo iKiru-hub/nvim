@@ -15,6 +15,7 @@
 ------------
 
 > <leader>r -- save and run python file
+> <esc> -- exit terminal model
 
 -- transparency : directly in plugin.dracula.lua 
 
@@ -31,12 +32,16 @@
 -- Telescope --
 ---------------
 > :Telescope -- available commands
+
+-- Custom Keybindings --
 > <leader>h || :Telescope find_files -- fuzzy search files in the current (+sub)directory 
         + <CR> to open file
         + <ctrl-v> to open file in vertical split
         + <ctrl-x> to open file in horizontal split
         + <Ctrl-t> to open file in new tab
 > <leader>g || :Telescope live_grep -- search with RegEx in file 
+> <leader>c || :Telescope colorscheme -- change colorscheme
+
 > :Telescope file_browser -- create files and folders
         + <ctrl-i> to create a file
 > :Telescope treesitter -- search str in the current file 
@@ -57,6 +62,12 @@
 -- Alpha-nvim --
 ----------------
 > <leader>a || :Alpha -- open Alpha window
+
+----------------
+-- Commentary --
+----------------
+> gcc -- comment line
+> gc -- comment visual selection
 
 ----------------------------------------------------
 ----------- Not really used anymore ----------------

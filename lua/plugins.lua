@@ -5,27 +5,7 @@ return require('packer').startup(
         -- Packer Manager --
         --------------------
 
-	    use 'wbthomason/packer.nvim'
-
-        -------------------
-        -- Neovim Welcom --
-        -------------------
-        
-        use {
-            'goolord/alpha-nvim',
-            requires = { 'nvim-tree/nvim-web-devicons' },
-            config = function ()
-                require'alpha'.setup(require'alpha.themes.startify'.config)
-                vim.api.nvim_set_keymap('n', '<leader>a', ':Alpha<CR>', {noremap = true, silent = true})
-            end
-        }
-
-        --use {
-        --    'goolord/alpha-nvim',
-        --    config = function ()
-        --        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-        --    end
-        --}
+    	use 'wbthomason/packer.nvim'
 
         -----------------------
 	    -- Colorscheme setup --
@@ -58,6 +38,11 @@ return require('packer').startup(
           end,
          }
 
+        -------------
+        -- Airline --
+        -------------
+        use {'vim-airline/vim-airline'}
+
         -------------------------
         -- Progamming workflow --
         -------------------------
@@ -67,6 +52,12 @@ return require('packer').startup(
 	        "windwp/nvim-autopairs",
             config = function() require("nvim-autopairs").setup {} end
         }
+
+        -- tagbar --
+        use {"majutsushi/tagbar"}
+
+        -- commentary --
+        use {"tpope/vim-commentary"}
 
         -- file explorer --
         use {"preservim/nerdtree"}
@@ -89,9 +80,50 @@ return require('packer').startup(
         
         -- github copilot --
         use {"github/copilot.vim"}
-        
-end)
 
+        -------------------
+        -- Neovim Welcom --
+        -------------------
+        --
+        --use 'mhinz/vim-startify'
+
+        use {"kyazdani42/nvim-tree.lua"}
+        use "kyazdani42/nvim-web-devicons"
+        
+        --  end,
+        --  requires = {'nvim-tree/nvim-web-devicons'}
+        --}
+        
+        --use {
+        --  'glepnir/dashboard-nvim',
+        --  event = 'VimEnter',
+        --  theme = 'hyper',
+        --  config = function()
+        --    require('dashboard').setup {
+              -- config
+        --    }
+        --  end,
+        --  requires = {'nvim-tree/nvim-web-devicons'}
+        --}
+        
+
+        --use {
+        --    'goolord/alpha-nvim',
+        --    requires = { 'nvim-tree/nvim-web-devicons' },
+        --    config = function ()
+        --        require'alpha'.setup(require'alpha.themes.startify'.config)
+        --        vim.api.nvim_set_keymap('n', '<leader>a', ':Alpha<CR>', {noremap = true, silent = true})
+        --    end
+        --}
+
+        use {
+            'goolord/alpha-nvim',
+            config = function ()
+                require 'configs.alpha-dash'
+            end
+        }
+       
+end)
 
 
 --------------------------------
