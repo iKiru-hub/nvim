@@ -69,6 +69,12 @@
 > gcc -- comment line
 > gc -- comment visual selection
 
+------------
+-- Tagbar --
+------------
+> <leader>t || :TagbarToggle -- open tagbar window
+> <leader>T || :TagbarClose -- close tagbar window
+
 ----------------------------------------------------
 ----------- Not really used anymore ----------------
 

@@ -6,16 +6,10 @@ require('settings')
 require('keybindings')
 
 -- plugin configs 
---require('configs.lsp')
+require('configs.lsp')
 require('configs.treesetter')
 require('configs.telescope')
 require('configs.coc')
 
-vim.g.dashboard_custom_header = {
-[[ ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗']],
-[[ ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║']],
-[[ ' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║']],
-[[ ' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║']],
-[[ ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║']],
-[[ ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝']],
-}
+-- hello 
+print('Hello World')

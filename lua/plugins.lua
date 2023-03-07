@@ -77,18 +77,43 @@ return require('packer').startup(
             "williamboman/nvim-lsp-installer",
             "neovim/nvim-lspconfig",
         }
+
+        -- which plugin --
+        use {"folke/which-key.nvim"}
+
+        -- debugging --
+        
+        -- dap install.nvim 
+        use {"Pocco81/DAPInstall.nvim"}
+
+        use {
+          "mfussenegger/nvim-dap",
+          opt = true,
+          event = "BufReadPre",
+          module = { "dap" },
+          wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python", "which-key.nvim" },
+          requires = {
+            "Pocco81/DAPInstall.nvim",
+            "theHamsta/nvim-dap-virtual-text",
+            "rcarriga/nvim-dap-ui",
+            "mfussenegger/nvim-dap-python",
+            "nvim-telescope/telescope-dap.nvim",
+            { "jbyuki/one-small-step-for-vimkind", module = "osv" },
+          },
+          config = function()
+            require("configs.dap").setup()
+          end,
+        }
         
         -- github copilot --
         use {"github/copilot.vim"}
 
-        -------------------
-        -- Neovim Welcom --
-        -------------------
-        --
-        --use 'mhinz/vim-startify'
+        ----------------------
+        -- Neovim Dashboard --
+        ----------------------
 
         use {"kyazdani42/nvim-tree.lua"}
-        use "kyazdani42/nvim-web-devicons"
+        use {"kyazdani42/nvim-web-devicons"}
         
         --  end,
         --  requires = {'nvim-tree/nvim-web-devicons'}
