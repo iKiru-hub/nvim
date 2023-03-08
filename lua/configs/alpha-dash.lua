@@ -8,9 +8,6 @@ dashboard.section.header.val = {
  [[]],
  [[]],
  [[]],
- [[]],
- [[]],
- [[]],
  [[                               __                ]],
  [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
  [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
@@ -46,7 +43,15 @@ dashboard.section.buttons.val = {
 -- write text in footer 
 dashboard.section.footer.val = ""
 dashboard.section.footer.val = ""
-dashboard.section.footer.val = "Hello Mercury!"
+
+-- datetime footer
+-- local date = os.date('*t')
+local time = os.date("*t")
+--print(os.date("%A, %m %B %Y | "), ("%02d:%02d:%02d"):format(time.hour, time.min, time.sec))`
+current_datetime = ("~ %02d:%02d:%02d ~"):format(time.hour, time.min, time.sec)
+
+-- footer
+dashboard.section.footer.val = current_datetime
 
 dashboard.config.opts.noautocmd = true
 vim.cmd[[autocmd User AlphaReady echo 'ready']]
