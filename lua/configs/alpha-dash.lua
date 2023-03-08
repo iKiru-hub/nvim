@@ -48,7 +48,7 @@ dashboard.section.footer.val = ""
 -- local date = os.date('*t')
 local time = os.date("*t")
 --print(os.date("%A, %m %B %Y | "), ("%02d:%02d:%02d"):format(time.hour, time.min, time.sec))`
-current_datetime = ("~ %02d:%02d:%02d ~"):format(time.hour, time.min, time.sec)
+current_datetime = ("~ %02d:%02d ~"):format(time.hour, time.min)
 
 -- footer
 dashboard.section.footer.val = current_datetime
