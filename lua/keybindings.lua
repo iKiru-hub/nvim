@@ -7,28 +7,41 @@ local function map(m, k, v)
 	vim.keymap.set(m, k, v, { silent=true })
 end
 
+-----------------
+-- Environment --
+-----------------
+
 -- mimic shell movements 
 -- : in append mode, with <ctrl + e> go to endline in append mode
 map('i', '<C-E>', '<ESC>A')
 map('i', '<C-A>', '<ESC>I')
 
--- save file + compile python file with <control + r>
-map('n', '<leader>r', ':w<CR>:!python %<CR>')
-
 -- enable transparency 
 map('n', '<leader>t', ':set winblend=10<CR>')
 map('n', '<leader>T', ':set winblend=0<CR>')
 
--- tagbar 
+-- exit terminal model with esc
+map('t', '<Esc>', '<C-\\><C-n>')
+
+-----------------
+-- Coding Flow --
+-----------------
+
+-- Python --
+-- save file + compile python file with <leader>r
+map('n', '<leader>r', ':w<CR>:!python %<CR>')
+
+-- Rust --
+-- compile rust file with <leader>e
+map('n', '<leader>e', ':w<CR>:RustRun<CR>')
+
+-- Tagbar --
 -- open tagbar with <leader> + t
 map('n', '<leader>t', ':TagbarToggle<CR>')
 -- close tagbar with <leader> + T
 map('n', '<leader>T', ':TagbarClose<CR>')
 
--- exit terminal model with esc
-map('t', '<Esc>', '<C-\\><C-n>')
-
--- Debugger 
+-- Debugger --
 map('n', '<leader>d', ':lua require"dap".toggle_breakpoint()<CR>')
 map('n', '<C-c>', ':lua require"dap".continue()<CR>')
 map('n', '<C-d>', ':lua require"dap".disconnect()<CR>')
