@@ -46,5 +46,6 @@ map('n', '<leader>d', ':lua require"dap".toggle_breakpoint()<CR>')
 map('n', '<C-c>', ':lua require"dap".continue()<CR>')
 map('n', '<C-d>', ':lua require"dap".disconnect()<CR>')
 map('n', '<C-i>', ':lua require"dap".step_into()<CR>')
-map('n', '<C-j>', ':lua require"dap".step_over()<CR>')
+map('n', '<C-a>', ':lua require"dap".step_over()<CR>')
 map('n', '<C-g>', ':lua require"dap".step_out()<CR>')
+
