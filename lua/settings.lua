@@ -27,9 +27,9 @@ o.cursorline = true
 
 -- Better editing experience
 o.expandtab = true
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
+o.expandtab = true
+o.shiftwidth = 4
+o.softtabstop = 4
 
 -- o.smarttab = true
 o.cindent = true
@@ -86,11 +86,13 @@ vim.cmd("set clipboard=unnamed")
 
 -- set the colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme sonokai]]
+vim.cmd("set t_Co=256")
 
--- set the background to transparent
-vim.api.nvim_set_hl(0, "Normal", { bg="none"})
-vim.api.nvim_set_hl(0, "NormalFloat", { bg="none" })
+vim.cmd(
+    [[colorscheme catppuccin]]
+)
+
+-- Transparent background for floating windows
 vim.api.nvim_set_hl(0, "NormalNC", { bg="none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { bg="none" })
 vim.api.nvim_set_hl(0, "Folded", { bg="none" })

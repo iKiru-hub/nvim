@@ -13,7 +13,7 @@ return require('packer').startup(
 
 	    use 'gruvbox-community/gruvbox'
         use 'Mofiqul/dracula.nvim'
-        use 'folke/tokyonight.nvim'
+        use 'folke/tokyonight.nvim'        
         use "EdenEast/nightfox.nvim"
         use 'catppuccin/nvim'
         use 'junegunn/vim-emoji'
@@ -25,7 +25,7 @@ return require('packer').startup(
         ------------------
         -- Transparency --
         ------------------
-        use 'tribela/vim-transparent'
+        -- use 'tribela/vim-transparent'
         
         -----------------------------
         -- Treesitter Highlighting --
