@@ -23,6 +23,9 @@ map('n', '<leader>T', ':set winblend=0<CR>')
 -- exit terminal model with esc
 map('t', '<Esc>', '<C-\\><C-n>')
 
+-- NERDtree --
+map('n', '<leader>n', ':NERDTreeToggle<CR>')  -- open NERDTree with <leader> + n
+
 -----------------
 -- Coding Flow --
 -----------------
@@ -30,6 +33,9 @@ map('t', '<Esc>', '<C-\\><C-n>')
 -- Python --
 -- save file + compile python file with <leader>r
 map('n', '<leader>r', ':w<CR>:!python %<CR>')
+
+-- open terminal in current directory with <leader>R, then with "ipy -i file.py" to run python file
+map('n', '<leader>R', ':w<CR>:vsp | :cd %:p:h | :exec "terminal" | :startinsert<CR>')
 
 -- Rust --
 -- compile rust file with <leader>e

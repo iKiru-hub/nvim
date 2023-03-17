@@ -15,6 +15,7 @@
 ------------
 
 > <leader>r -- save and run python file
+> <leader>R -- save file and open terminal in the same directory
 > <esc> -- exit terminal model
 
 -- transparency : directly in plugin.dracula.lua 
@@ -81,6 +82,8 @@
 --------------
 -- NERDTree --
 --------------
+> <leader>n || :NERDTreeToggle -- open NERDTree window
+> m -- open file system menu
 > if need help, type ':NERDTree' and then '?'
 > to move between tabs 'gt' 'gT'
 > to move between splits 'ctrl' + 'W'
