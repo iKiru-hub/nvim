@@ -48,7 +48,7 @@ map('n', '<leader>t', ':TagbarToggle<CR>')
 map('n', '<leader>T', ':TagbarClose<CR>')
 
 -- Debugger --
-map('n', '<leader>d', ':lua require"dap".toggle_breakpoint()<CR>')
+map('n', '<leader>d', ':w<CR>:lua require"dap".toggle_breakpoint()<CR>')
 map('n', '<C-c>', ':lua require"dap".continue()<CR>')
 map('n', '<C-d>', ':lua require"dap".disconnect()<CR>')
 map('n', '<C-i>', ':lua require"dap".step_into()<CR>')
