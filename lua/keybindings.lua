@@ -49,6 +49,7 @@ map('n', '<leader>T', ':TagbarClose<CR>')
 
 -- Debugger --
 map('n', '<leader>d', ':w<CR>:lua require"dap".toggle_breakpoint()<CR>')
+map('n', '<leader>D', ':w<CR>:lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>')
 map('n', '<C-c>', ':lua require"dap".continue()<CR>')
 map('n', '<C-d>', ':lua require"dap".disconnect()<CR>')
 map('n', '<C-i>', ':lua require"dap".step_into()<CR>')
