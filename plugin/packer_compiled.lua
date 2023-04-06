@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
+  ["melange-nvim"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
+  },
   neomake = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/neomake",
@@ -132,7 +137,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-dap"] = {
-    after = { "telescope-dap.nvim", "one-small-step-for-vimkind", "nvim-dap-virtual-text", "nvim-dap-ui", "nvim-dap-python" },
+    after = { "one-small-step-for-vimkind", "telescope-dap.nvim", "nvim-dap-virtual-text", "nvim-dap-ui", "nvim-dap-python" },
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16configs.dap\frequire\0" },
     loaded = false,
     needs_bufread = false,
@@ -167,6 +172,15 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/opt/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
+  ["nvim-docs-view"] = {
+    commands = { "DocsViewToggle" },
+    config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\nwidth\3<\rposition\nright\nsetup\14docs-view\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/opt/nvim-docs-view",
+    url = "https://github.com/amrbashir/nvim-docs-view"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -277,6 +291,21 @@ _G.packer_plugins = {
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-emoji",
     url = "https://github.com/junegunn/vim-emoji"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    url = "https://github.com/tpope/vim-rhubarb"
+  },
+  ["vim-solarized8"] = {
+    loaded = true,
+    path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/vim-solarized8",
+    url = "https://github.com/lifepillar/vim-solarized8"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/daniekru/.local/share/nvim/site/pack/packer/start/which-key.nvim",
@@ -322,6 +351,18 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23configs.alpha-dash\frequire\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'DocsViewToggle', function(cmdargs)
+          require('packer.load')({'nvim-docs-view'}, { cmd = 'DocsViewToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'nvim-docs-view'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('DocsViewToggle ', 'cmdline')
+      end})
+time([[Defining lazy-load commands]], false)
+
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

@@ -11,14 +11,16 @@ end
 -- Environment --
 -----------------
 
+-- open ~/.config/nvim/help.txt in a new tab with <leader>H 
+-- map('n', '<leader>H', ':tabnew ~/.config/nvim/help.txt<CR>')
+
+-- open ~/.config/nvim/help.txt in a new toggle panel with <leader>H 
+map('n', '<leader>H', ':vnew ~/.config/nvim/help.txt<CR>')
+
 -- mimic shell movements 
 -- : in append mode, with <ctrl + e> go to endline in append mode
 map('i', '<C-E>', '<ESC>A')
 map('i', '<C-A>', '<ESC>I')
-
--- enable transparency 
-map('n', '<leader>t', ':set winblend=10<CR>')
-map('n', '<leader>T', ':set winblend=0<CR>')
 
 -- exit terminal model with esc
 map('t', '<Esc>', '<C-\\><C-n>')
@@ -29,6 +31,10 @@ map('n', '<leader>n', ':NERDTreeToggle<CR>')  -- open NERDTree with <leader> + n
 -----------------
 -- Coding Flow --
 -----------------
+
+-- Git --
+-- git add . + git commit -m "online update" + git push
+map('n', '<leader>G', ':w<CR>:!git add .<CR>:!git commit -m "online update"<CR>:!git push<CR>')
 
 -- Python --
 -- save file + compile python file with <leader>r

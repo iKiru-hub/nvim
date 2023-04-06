@@ -14,6 +14,8 @@
 -- CUSTOM --
 ------------
 
+> <leader>H || open help.txt in a vsplit 
+
 > <leader>r -- save and run python file
 > <leader>R -- save file and open terminal in the same directory
 > <esc> -- exit terminal model
@@ -75,6 +77,11 @@
 ------------
 > <leader>t || :TagbarToggle -- open tagbar window
 > <leader>T || :TagbarClose -- close tagbar window
+
+---------
+-- Git --
+---------
+> <leader>G !! git add . + git commit -m "online update" + git push
 
 ----------------------------------------------------
 ----------- Not really used anymore ----------------

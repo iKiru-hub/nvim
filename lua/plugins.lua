@@ -21,6 +21,9 @@ return require('packer').startup(
         use 'sainnhe/sonokai'
         use 'navarasu/onedark.nvim'
         use 'NLKNguyen/papercolor-theme'
+        use 'lifepillar/vim-solarized8'
+        use "savq/melange-nvim"
+
 
         ------------------
         -- Transparency --
@@ -55,6 +58,19 @@ return require('packer').startup(
 
         -- tagbar --
         use {"majutsushi/tagbar"}
+
+        -- doc view --
+        use {
+          "amrbashir/nvim-docs-view",
+          opt = true,
+          cmd = { "DocsViewToggle" },
+          config = function()
+            require("docs-view").setup {
+              position = "right",
+              width = 60,
+            }
+          end
+        }
 
         -- commentary --
         use {"tpope/vim-commentary"}
@@ -104,6 +120,10 @@ return require('packer').startup(
             require("configs.dap").setup()
           end,
         }
+
+        -- git --
+        use {"tpope/vim-fugitive"}
+        use {"tpope/vim-rhubarb"}
         
         -- github copilot --
         use {"github/copilot.vim"}
@@ -115,32 +135,6 @@ return require('packer').startup(
         use {"kyazdani42/nvim-tree.lua"}
         use {"kyazdani42/nvim-web-devicons"}
         
-        --  end,
-        --  requires = {'nvim-tree/nvim-web-devicons'}
-        --}
-        
-        --use {
-        --  'glepnir/dashboard-nvim',
-        --  event = 'VimEnter',
-        --  theme = 'hyper',
-        --  config = function()
-        --    require('dashboard').setup {
-              -- config
-        --    }
-        --  end,
-        --  requires = {'nvim-tree/nvim-web-devicons'}
-        --}
-        
-
-        --use {
-        --    'goolord/alpha-nvim',
-        --    requires = { 'nvim-tree/nvim-web-devicons' },
-        --    config = function ()
-        --        require'alpha'.setup(require'alpha.themes.startify'.config)
-        --        vim.api.nvim_set_keymap('n', '<leader>a', ':Alpha<CR>', {noremap = true, silent = true})
-        --    end
-        --}
-
         use {
             'goolord/alpha-nvim',
             config = function ()
