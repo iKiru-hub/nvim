@@ -83,8 +83,21 @@
 ---------
 > <leader>G !! git add . + git commit -m "online update" + git push
 
-----------------------------------------------------
------------ Not really used anymore ----------------
+---------
+-- DAP --
+---------
+> <leader>d || :lua require'dap'.toggle_breakpoint() -- toggle breakpoint
+> <leader>D || :lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: ")) -- set breakpoint
+> <C-c> || :lua require'dap'.continue() -- continue
+> <C-d> || :lua require'dap'.disconnect() -- disconnect
+> <C-i> || :lua require'dap'.step_into() -- step into
+> <C-a> || :lua require'dap'.step_over() -- step over
+> <C-g> || :lua require'dap'.step_out() -- step out
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+----------- Not really used anymore ---------------- %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 --------------
 -- NERDTree --
