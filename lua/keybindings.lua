@@ -45,7 +45,9 @@ map('n', '<leader>R', ':w<CR>:vsp | :cd %:p:h | :exec "terminal" | :startinsert<
 
 -- Rust --
 -- compile rust file with <leader>e
-map('n', '<leader>e', ':w<CR>:RustRun<CR>')
+map('n', '<leader>E', ':w<CR>:RustRun<CR>')
+-- compile rust file using "cargo run" with <leader>E
+map('n', '<leader>e', ':w<CR>:vsp | :cd %:p:h |:terminal {cd ..; cargo run}<CR>')
 
 -- Tagbar --
 -- open tagbar with <leader> + t
