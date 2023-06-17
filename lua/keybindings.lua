@@ -38,8 +38,8 @@ map('n', '<leader>G', ':w<CR>:!git add .<CR>:!git commit -m "online update"<CR>:
 
 -- Python --
 -- save file + compile python file with <leader>r
-map('n', '<leader>r', ':w<CR>:!python %<CR>')
-map('n', '<leader>R', ':w<CR>:vsp | :cd %:p:h |:terminal {python utils.py}<CR>')
+map('n', '<leader>R', ':w<CR>:!python %<CR>')
+map('n', '<leader>r', ':w<CR>:vsp | :cd %:p:h |:terminal {python utils.py}<CR>')
 
 -- open terminal in current directory with <leader>R, then with "ipy -i file.py" to run python file
 -- map('n', '<leader>R', ':w<CR>:vsp | :cd %:p:h | :exec "terminal" | :startinsert<CR>')
