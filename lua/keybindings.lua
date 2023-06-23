@@ -38,11 +38,11 @@ map('n', '<leader>G', ':w<CR>:!git add .<CR>:!git commit -m "online update"<CR>:
 
 -- Python --
 -- save file + compile python file with <leader>r
-map('n', '<leader>R', ':w<CR>:!python %<CR>')
-map('n', '<leader>r', ':w<CR>:vsp | :cd %:p:h |:terminal {python utils.py}<CR>')
+map('n', '<leader>r', ':w<CR>:!python %<CR>')
+-- map('n', '<leader>R', ':w<CR>:vsp | :cd %:p:h |:terminal {python utils.py}<CR>')
 
 -- open terminal in current directory with <leader>R, then with "ipy -i file.py" to run python file
--- map('n', '<leader>R', ':w<CR>:vsp | :cd %:p:h | :exec "terminal" | :startinsert<CR>')
+map('n', '<leader>R', ':w<CR>:vsp | :cd %:p:h | :exec "terminal" | :startinsert<CR>')
 
 -- Rust --
 -- compile rust file with <leader>e
@@ -55,6 +55,10 @@ map('n', '<leader>e', ':w<CR>:vsp | :cd %:p:h |:terminal {cd ..; cargo run}<CR>'
 map('n', '<leader>t', ':TagbarToggle<CR>')
 -- close tagbar with <leader> + T
 map('n', '<leader>T', ':TagbarClose<CR>')
+
+-- SPLIT --
+map('n', '<leader>v', ':vsp<CR>')  -- vertical split
+map('n', '<leader>q', ':wq<CR>')  -- close current window
 
 -- Debugger --
 map('n', '<leader>d', ':w<CR>:lua require"dap".toggle_breakpoint()<CR>')
