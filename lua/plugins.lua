@@ -57,7 +57,12 @@ return require('packer').startup(
         }
 
         -- tagbar --
-        use {"majutsushi/tagbar"}
+        use {
+            "majutsushi/tagbar",
+            vim.cmd([[
+                let g:tagbar_show_linenumbers=1
+            ]]),
+        }
 
         -- doc view --
         use {
