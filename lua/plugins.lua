@@ -18,6 +18,7 @@ return require('packer').startup(
         use 'catppuccin/nvim'
         use 'junegunn/vim-emoji'
         use 'gosukiwi/vim-atom-dark'
+        use "tjdevries/colorbuddy.nvim"
         use 'sainnhe/sonokai'
         use 'navarasu/onedark.nvim'
         use 'NLKNguyen/papercolor-theme'
