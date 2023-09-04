@@ -47,6 +47,10 @@ return require('packer').startup(
         -------------
         use {'vim-airline/vim-airline'}
 
+        -- tmux integration --
+        use {'christoomey/vim-tmux-navigator',
+             lazy = false}
+
         -------------------------
         -- Progamming workflow --
         -------------------------
